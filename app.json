@@ -1,0 +1,48 @@
+{
+  "pages": [
+    "pages/components/home/home",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/components/goodlist/goodlist",
+    "pages/components/shoppingcart/shoppingcart",
+    "pages/components/account/account"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "ihesen",
+    "navigationBarTextStyle": "black"    
+  },
+  "tabBar": {
+    "color": "#959394",
+    "selectedColor": "#959394",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "#888888",
+    "list": [
+      {
+        "selectedIconPath": "pages/images/icon_home_selected.png",
+        "iconPath": "pages/images/icon_home_unselected.png",
+        "pagePath": "pages/components/home/home",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "pages/images/icon_goodlist_selected.png",
+        "iconPath": "pages/images/icon_goodlist_unselected.png",
+        "pagePath": "pages/components/goodlist/goodlist",
+        "text": "闪送超市"
+      },
+      {
+        "selectedIconPath": "pages/images/icon_cart_selected.png",
+        "iconPath": "pages/images/icon_cart_unselected.png",
+        "pagePath": "pages/components/shoppingcart/shoppingcart",
+        "text": "购物车"
+      },
+      {
+        "selectedIconPath": "pages/images/icon_account_selected.png",
+        "iconPath": "pages/images/icon_account_unselected.png",
+        "pagePath": "pages/components/account/account",
+        "text": "我的账户"
+      }
+    ]
+  }
+}

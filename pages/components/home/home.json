@@ -1,0 +1,26 @@
+{
+  "tabBar": {
+    "color": "#959394",
+    "selectedColor": "#959394",
+    "backgroundColor": "#f0f0f0",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/components/goodlist/goodlist",
+        "text": "闪送超市"
+      },
+      {
+        "pagePath": "pages/components/shoppingcart/shoppingcart",
+        "text": "购物车"
+      },
+      {
+        "pagePath": "pages/components/account/account",
+        "text": "我的账户"
+      }
+    ]
+  }
+}

@@ -1,0 +1,43 @@
+<!--home.wxml-->
+<view>
+  <view class="home_topbar">
+    <text class="home_topbar_delivery">{{location}}</text>
+    <view class="home_topbar_option_button">
+      <image src="../../images/scan_black.png" class="home_topbar_icon" bindtap="doScan" />
+      <image src="../../images/search_black.png" class="home_topbar_icon" bindtap="doSearch" />
+    </view>
+  </view>
+
+  <scroll-view style="height: {{windowHeight}}px; width: {{windowWidth}}px;" scroll-y="true" bindscrolltolower="scrolltolower">
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-active-color="#FFDE3B">
+      <block wx:for="{{topBanner}}">
+        <swiper-item>
+          <image src="{{item.ad_img}}" class="img" mode="widthFix" />
+        </swiper-item>
+      </block>
+    </swiper>
+    <swiper indicator-dots="{{true}}" class="weui-grids">
+      <swiper-item wx:for="{{secondArr}}">
+        <view class="weui-grid" wx:for="{{item}}" data-item="{{item}}" bindtap="serviceGoTo">
+          <view class="weui-grid__icon">
+            <image src=" {{item.icon}}" mode="widthFix" />
+          </view>
+          <text class="weui-grid__label">{{item.title}}</text>
+        </view>
+      </swiper-item>
+    </swiper>
+    <view style="display: flex; font-size: 16px; justify-content: center;">
+      <text>实时推荐</text>
+    </view>
+
+    <view class="weui-sku" wx:for="{{skuRecommend}}" bindtap="doProduct">
+      <view style="display: flex; justify-content: center;">
+        <image class="weui-sku__skuimg" src="{{item.default_image}}" />
+      </view>
+      <text style="text-align: left;" class="weui-grid__label">{{item.goods_name}}</text>
+      <text style="display: flex; color: red; margin-top: 5px;" class="weui-grid__label">￥{{item.price}}</text>
+    </view>
+    <view class="loading" hidden="{{!skuLoading}}">正在载入更多...</view>
+    <view class="loading complete" hidden="{{!skuLoadingCompleted}}">已加载全部</view>
+  </scroll-view>
+</view>
